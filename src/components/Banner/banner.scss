@@ -1,0 +1,86 @@
+@use "../../sass/variables" as *;
+
+.swiper {
+    .swiper-wrapper {
+        .swiper-slide {
+            position: relative;
+            img {
+                width: 100%;
+            }
+            .banner-text {
+                position: absolute;
+                top: 80px;
+                left: 200px;
+                display: grid;
+                gap: 30px;
+                right: 200px;
+                h1 {
+                    font-size: 38px;
+                    font-weight: 700;
+                    line-height: 48px;
+                    letter-spacing: -0.5px;
+                    text-align: left;
+                    color: $text-white;
+                    width: 412px;
+                }
+                h5 {
+                    @include Text-Middle;
+                    color: $text-white;
+                    width: 457px;
+                }
+                p {
+                    @include Text-Middle;
+                    font-weight: 400;
+                    color: $text-white;
+                    width: 457px;
+                }
+                &_icons {
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    &_item {
+                        display: flex;
+                        gap: 5px;
+                        span {
+                            width: 60px;
+                            height: 60px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: $text-white;
+                            border-radius: 50%;
+                            svg {
+                                font-size: 20px;
+                            }
+                        }
+                        &_text {
+                            display: grid;
+                            gap: 5px;
+                            h5 {
+                                width: 100px;
+                            }
+                            p {
+                                width: 216px;
+                                font-size: 12px;
+                                font-weight: 400;
+                                line-height: 15px;
+                                letter-spacing: -0.5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: $text-white;
+        border: 1px solid $text-white;
+        padding: 10px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        &::after {
+            font-size: 25px;
+        }
+    }
+}

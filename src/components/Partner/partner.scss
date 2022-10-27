@@ -1,0 +1,128 @@
+@use "../../sass/variables" as *;
+
+.partner {
+    display: grid;
+    &_title {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        &_one,
+        &_two {
+            padding: 20px 0px;
+            border: 1px solid #e7e6e6;
+            text-align: center;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 23px;
+            letter-spacing: -0.5px;
+        }
+    }
+    &_images {
+        display: flex;
+        .category_colum {
+            display: flex;
+            &_item {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                .one {
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        border-top: 20px solid transparent;
+                        border-bottom: 20px solid transparent;
+                        border-right: 35px solid $text_white;
+                        left: -35px;
+                    }
+                }
+                .two {
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        border-top: 20px solid transparent;
+                        border-bottom: 20px solid transparent;
+                        border-left: 35px solid $text_white;
+                        right: -35px;
+                    }
+                }
+                &_text {
+                    position: relative;
+                    display: grid;
+                    margin-top: 28px;
+                    padding: 0px 30px;
+                    h1 {
+                        @include Text_Big;
+                        color: $text_dark;
+                        span {
+                            @include Text_Big;
+                            color: $text_red;
+                        }
+                        text-transform: uppercase;
+                    }
+                    p {
+                        @include Text;
+                        color: $text_dark;
+                    }
+                    span {
+                        @include Text;
+                        color: $text_blue;
+                    }
+                    .icon {
+                        width: 50px;
+                        height: 50px;
+                        border: 1px solid $text_red;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 35px;
+                        svg {
+                            color: $text_red;
+                        }
+                    }
+                }
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &_footer {
+        display: flex;
+        &_column {
+            width: 100%;
+            padding: 20px 0px;
+            border: 1px solid #e7e6e6;
+            text-align: center;
+            h2 {
+                text-transform: uppercase;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 23px;
+                letter-spacing: -0.5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                svg {
+                    font-size: 25px;
+                }
+            }
+            &:nth-child(3) {
+                h2 {
+                    color: $text_blue;
+                }
+            }
+            &:first-child,
+            &:last-child {
+                h2 {
+                    color: rgba(7, 24, 40, 0.08);
+                }
+            }
+        }
+    }
+}

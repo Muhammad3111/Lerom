@@ -1,0 +1,78 @@
+@use "../../sass/variables" as *;
+
+.category {
+    display: grid;
+    &_colum {
+        display: flex;
+        &_item {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            .one {
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-top: 20px solid transparent;
+                    border-bottom: 20px solid transparent;
+                    border-right: 35px solid $text_white;
+                    left: -35px;
+                }
+            }
+            .two {
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-top: 20px solid transparent;
+                    border-bottom: 20px solid transparent;
+                    border-left: 35px solid $text_white;
+                    right: -35px;
+                }
+            }
+            &_text {
+                position: relative;
+                display: grid;
+                margin-top: 54px;
+                padding: 0px 30px;
+                h1 {
+                    @include Text_Big;
+                    color: $text_dark;
+                    text-transform: uppercase;
+                }
+                p {
+                    @include Text;
+                    color: $text_dark;
+                }
+                span {
+                    @include Text;
+                    color: $text_blue;
+                }
+                .icon {
+                    width: 50px;
+                    height: 50px;
+                    border: 1px solid $text_blue;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 35px;
+                    svg {
+                        color: $text_blue;
+                    }
+                }
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+    &_colum_last {
+        display: grid;
+        .category_colum_item {
+            display: grid;
+            grid-template-columns: 60% 40%;
+        }
+    }
+}

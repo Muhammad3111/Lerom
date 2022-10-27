@@ -1,0 +1,26 @@
+$text-blue: #004583;
+$text-black: #000000;
+$text-red: #bb2822;
+$text-white: #ffffff;
+$text-dark: #071828;
+
+@mixin Text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+}
+@mixin Text_Big {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31px;
+    letter-spacing: -0.5px;
+    color: $text-dark;
+}
+@mixin Text-Middle {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: -0.5px;
+    color: $text-dark;
+}

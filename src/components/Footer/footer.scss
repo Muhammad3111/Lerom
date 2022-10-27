@@ -1,0 +1,51 @@
+@use "../../sass/variables" as *;
+
+.footer {
+    .columns {
+        display: flex;
+        justify-content: space-between;
+        padding: 27px 25px;
+        border-bottom: 1px solid #e7e6e6;
+        &_column {
+            display: grid;
+            gap: 10px;
+            width: 100%;
+            h2 {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 35px;
+                letter-spacing: -0.5px;
+            }
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 35px;
+                letter-spacing: -0.5px;
+            }
+        }
+        &_last {
+            width: 100%;
+            display: grid;
+            gap: 20px;
+            text-align: center;
+            h3 {
+                border-bottom: 1px solid #e7e6e6;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 35px;
+                letter-spacing: -0.5px;
+                color: $text_blue;
+            }
+        }
+    }
+    .bottom-text {
+        padding: 22px 25px;
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: -0.5px;
+            color: #bebebe;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@use "../../sass/variables" as *;
+
+.about {
+    background: linear-gradient(0deg, rgba(0, 69, 131, 0.35), rgba(0, 69, 131, 0.35)),
+        url(../../../public/image/rectangle12.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 458px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    h1 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 31px;
+        letter-spacing: -0.5px;
+        text-align: center;
+        color: $text_white;
+    }
+    .icon {
+        width: 97px;
+        height: 97px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        svg {
+            font-size: 50px;
+            color: $text_red;
+        }
+    }
+    button {
+        border: 1px solid #ffffff;
+        border-radius: 22px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: -0.5px;
+        padding: 13px 43px;
+        background-color: transparent;
+        color: $text_white;
+        cursor: pointer;
+    }
+}

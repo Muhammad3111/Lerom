@@ -1,0 +1,110 @@
+@use "../../sass/variables" as *;
+
+.header {
+    .top-header {
+        padding: 8px 108px;
+        border: 1px solid #efefef;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &_one {
+            display: grid;
+            gap: 10px;
+            p {
+                @include Text;
+                color: $text-black;
+                display: flex;
+                align-items: flex-start;
+                gap: 5px;
+                svg {
+                    font-size: 20px;
+                    color: $text-blue;
+                }
+            }
+            a {
+                @include Text;
+                color: $text-blue;
+            }
+        }
+        &_three {
+            display: grid;
+            gap: 10px;
+            text-align: right;
+            p {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 18px;
+                letter-spacing: -0.5px;
+                display: grid;
+                grid-template-columns: auto auto auto;
+                align-items: flex-start;
+                justify-content: flex-end;
+                text-align: right;
+                gap: 5px;
+                svg {
+                    font-size: 14px;
+                    color: $text-blue;
+                }
+            }
+            span {
+                color: $text-red;
+            }
+        }
+    }
+    .navbar {
+        display: grid;
+        justify-content: space-between;
+        padding: 8px 108px;
+        align-items: center;
+        grid-template-columns: 75% 25%;
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            .link {
+                padding: 0px 20px;
+                cursor: pointer;
+                a {
+                    text-decoration: none;
+                    @include Text;
+                    color: $text-black;
+                }
+            }
+            .active {
+                color: $text-red;
+                padding: 0px 20px;
+                cursor: pointer;
+                a {
+                    text-decoration: none;
+                    @include Text;
+                    color: $text-red;
+                }
+            }
+        }
+        .search {
+            position: relative;
+            input {
+                width: calc(100% - 34px);
+                border-radius: 10px;
+                border: 1px solid #004583;
+                border-radius: 47px;
+                padding: 8px 17px;
+                &::placeholder {
+                    @include Text;
+                    color: $text-blue;
+                }
+                &:focus {
+                    outline: none;
+                    border: 1px solid $text-dark;
+                }
+            }
+            svg {
+                position: absolute;
+                font-size: 20px;
+                color: $text-red;
+                right: 15px;
+                top: 5px;
+            }
+        }
+    }
+}
